@@ -1,0 +1,21 @@
+{
+  "name": "data_test_ghost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingecar/DATA_TEST_GHOST.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ingecar/DATA_TEST_GHOST/issues"
+  },
+  "homepage": "https://github.com/ingecar/DATA_TEST_GHOST#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.22.1"
+  }
+}
