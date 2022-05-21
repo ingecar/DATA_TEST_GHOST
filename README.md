@@ -13,7 +13,7 @@ npm init playwright@latest
 ```
 npx playwright install  
 ```
-#### 5. Ejecutar los tests
+#### 4. Ejecutar los tests
 ```
 npx playwright test
 ```
