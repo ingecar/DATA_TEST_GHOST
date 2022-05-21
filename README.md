@@ -21,8 +21,13 @@ found 0 vulnerabilities
 npx playwright install  
 ```
 #### 4. Ejecutar los tests
+Ejecutar todos los test
 ```
 npx playwright test
+```
+Ejecutar un test específico
+```
+npx playwright test tests/nombreTest.spec.ts
 ```
 #### NOTA:
 1. La versión de Ghost usada es: 
