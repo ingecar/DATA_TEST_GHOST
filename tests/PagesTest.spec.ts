@@ -112,7 +112,7 @@ test.describe('Tests Pages', () => {
         await page.locator('li a', {hasText: 'Pages'}).click();
         await expect(page).toHaveURL('http://localhost:2368/ghost/#/pages');
         await page.locator('li[class="gh-list-row gh-posts-list-item"]').nth(0).click();
-        await page.locator('textarea[placeholder="Page title"]').fill('Sed eu purus non magna ullamcorper euismod. Vestibulum fermentum semper eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius aliquet tellus, vitae laoreet orci blandit sit amet. Nulla convallis porttitor ante, a lacinia sem est');
+        await page.locator('textarea[placeholder="Page title"]').fill(faker.datatype.string(254));
         await page.locator('div[data-placeholder="Begin writing your page..."]').fill('');
         await Promise.all([
             page.locator('.koenig-editor__editor').click()
@@ -129,7 +129,7 @@ test.describe('Tests Pages', () => {
         await page.locator('li a', {hasText: 'Pages'}).click();
         await expect(page).toHaveURL('http://localhost:2368/ghost/#/pages');
         await page.locator('li[class="gh-list-row gh-posts-list-item"]').nth(0).click();
-        await page.locator('textarea[placeholder="Page title"]').fill('Sed eu purus non magna ullamcorper euismod. Vestibulum fermentum semper eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius aliquet tellus, vitae laoreet orci blandit sit amet. Nulla convallis porttitor ante, a lacinia sem esta');
+        await page.locator('textarea[placeholder="Page title"]').fill(faker.datatype.string(255));
         await page.locator('div[data-placeholder="Begin writing your page..."]').fill('');
         await Promise.all([
             page.locator('.koenig-editor__editor').click()
@@ -146,7 +146,7 @@ test.describe('Tests Pages', () => {
         await page.locator('li a', {hasText: 'Pages'}).click();
         await expect(page).toHaveURL('http://localhost:2368/ghost/#/pages');
         await page.locator('li[class="gh-list-row gh-posts-list-item"]').nth(0).click();
-        await page.locator('textarea[placeholder="Page title"]').fill('Sed eu purus non magna ullamcorper euismod. Vestibulum fermentum semper eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius aliquet tellus, vitae laoreet orci blandit sit amet. Nulla convallis porttitor ante, a lacinia sem estan');
+        await page.locator('textarea[placeholder="Page title"]').fill(faker.datatype.string(256));
         await page.locator('div[data-placeholder="Begin writing your page..."]').fill('');
         await Promise.all([
             page.locator('.koenig-editor__editor').click()

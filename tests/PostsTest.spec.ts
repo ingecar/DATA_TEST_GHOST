@@ -109,7 +109,7 @@ test.describe('Tests Post', () => {
         await page.locator('li', { hasText: 'Posts' }).click();
         await page.click('a[title=Published]')
         await page.locator('h3[class="gh-content-entry-title"]').nth(0).click()
-        await page.locator('textarea[placeholder="Post title"]').fill('Sed eu purus non magna ullamcorper euismod. Vestibulum fermentum semper eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius aliquet tellus, vitae laoreet orci blandit sit amet. Nulla convallis porttitor ante, a lacinia sem est')
+        await page.locator('textarea[placeholder="Post title"]').fill(faker.datatype.string(254))
         await page.locator('div[data-placeholder="Begin writing your post..."]').fill(post.description)
         await page.locator('div[role="button"]:has-text("Update")').click();
         // Click Update
@@ -126,7 +126,7 @@ test.describe('Tests Post', () => {
         await page.locator('li', { hasText: 'Posts' }).click();
         await page.click('a[title=Published]')
         await page.locator('h3[class="gh-content-entry-title"]').nth(0).click()
-        await page.locator('textarea[placeholder="Post title"]').fill('Sed eu purus non magna ullamcorper euismod. Vestibulum fermentum semper eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius aliquet tellus, vitae laoreet orci blandit sit amet. Nulla convallis porttitor ante, a lacinia sem esta')
+        await page.locator('textarea[placeholder="Post title"]').fill(faker.datatype.string(255))
         await page.locator('div[data-placeholder="Begin writing your post..."]').fill(post.description)
         await page.locator('div[role="button"]:has-text("Update")').click();
         // Click Update
@@ -143,7 +143,7 @@ test.describe('Tests Post', () => {
         await page.locator('li', { hasText: 'Posts' }).click();
         await page.click('a[title=Published]')
         await page.locator('h3[class="gh-content-entry-title"]').nth(0).click()
-        await page.locator('textarea[placeholder="Post title"]').fill('Sed eu purus non magna ullamcorper euismod. Vestibulum fermentum semper eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius aliquet tellus, vitae laoreet orci blandit sit amet. Nulla convallis porttitor ante, a lacinia sem estrd')
+        await page.locator('textarea[placeholder="Post title"]').fill(faker.datatype.string(256))
         await page.locator('div[data-placeholder="Begin writing your post..."]').fill(post.description)
         await page.locator('div[role="button"]:has-text("Update")').click();
         // Click Update
