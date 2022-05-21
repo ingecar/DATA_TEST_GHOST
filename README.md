@@ -8,6 +8,13 @@
 ```
 cd DATA_TEST_GHOST 
 npm init playwright@latest
+
+√ Do you want to use TypeScript or JavaScript? · TypeScript
+√ Where to put your end-to-end tests? · e2e
+√ Add a GitHub Actions workflow? (y/N) · false
+Installing Playwright Test (npm install --save-dev @playwright/test)…
+added 5 packages, and audited 6 packages in 19s
+found 0 vulnerabilities
 ```
 #### 3. Actualizar Dependencias
 ```
