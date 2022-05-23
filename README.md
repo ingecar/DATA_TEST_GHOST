@@ -34,6 +34,21 @@ npx playwright test tests/nombreTest.spec.ts
 `Ghost-CLI version: 1.19.3` - `Ghost version: 4.46.0`
 2. Tener en cuenta que para la correcta ejecución de los test, es necesario cambiar en el archivo `environment.ts`, los atributos de `email` y `pass`, con los del usuario local de Ghost. Esto teniendo en cuenta que son diferentes para cada usuario.
 
+# Pruebas realizadas con Kraken
+
+Utilizando la herramienta Kraken se generaron 60 escenarios utilizando las estrategias de generación de datos que se enuncian a continuación:
+
+## A. Data pool a-priori
+
+Para la generación de este tipo de datos se utilizó la herramienta Mockaroo mediante la ejecución de un script de generación ubicado en el directorio `data_generators` el cual después de ser ejecutado mediante el comando `node data_generator_file.js`, genera un archivo JSON en el directorio `data_pools`, con los datos requeridos para la prueba, generándose con el mismo nombre del archivo generador pero con la extensión .json; Para cada escenario de pruebas implementado, se importa este archivo teniendo en cuenta que el nombre del feature debe ser igual al nombre del data pool. La selección de los datos del archivo data pool durante la prueba, se realiza de forma aletaria mediante una función random.
+
+## B. Data pool (pseudo) aleatorio dinámico
+
+Para la generación de este tipo de datos se utilizó la libreria faker. Por medio de esta libraría se construyó una función que genera de forma aleatoria un pool de datos con un rango de entre 10 y 20 registros, los cuales se almacenan en un array para después ser accedido durante la prueba mediante la selección nuevamente aleatoria de uno de sus registros, utilizando el indice del array para acceder a sus valores.
+
+## C. Estrategia escenario aleatorio
+
+La generación de datos de esta estrategia se realizó en algunos casos con Kraken faker y en otros casos con la libraría Faker de la anterior estrategia.
 
 ### Pruebas E2E con Kraken:
 
