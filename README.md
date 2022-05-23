@@ -46,11 +46,11 @@ Para la generación de este tipo de datos se utilizó la herramienta Mockaroo me
 
 ## B. Data pool (pseudo) aleatorio dinámico
 
-Para la generación de este tipo de datos se utilizó la libreria faker. Por medio de esta libraría se construyó una función que genera de forma aleatoria un pool de datos con un rango de entre 10 y 20 registros, los cuales se almacenan en un array para después ser accedido durante la prueba mediante la selección nuevamente aleatoria de uno de sus registros, utilizando el indice del array para tomar sus valores.
+Para la generación de este tipo de datos se utilizó la libreria faker. Por medio de esta libraría se construyó una función que genera de forma dinámica y  aleatoria un pool de datos con un rango de entre 10 y 20 registros, los cuales se almacenan en un array para después ser accedido durante la prueba mediante la selección nuevamente aleatoria de uno de sus registros, utilizando el indice del array para tomar sus valores.
 
 ## C. Estrategia escenario aleatorio
 
-La generación de datos de esta estrategia se realizó en algunos casos con Kraken faker y en otros casos con la libraría Faker de la anterior estrategia.
+La generación de datos de esta estrategia se realizó en algunos casos con Kraken faker y en otros casos con la libraría Faker de la anterior estrategia, haciendo uso de los métodos que la libraría dispone para cada tipo de dato requerido.
 
 ## Instalación del proyecto y ejecución de las pruebas
 
@@ -90,5 +90,67 @@ Los escenarios de prueba se encuentran en el directorio principal. Para correr u
 Se debe ejecutar cada archivo de forma independiente siguiendo el orden del numeral asociado al archivo para que las pruebas corran de forma correcta.
 
 Para correr la prueba, ejecute el comando `./node_modules/kraken-node/bin/kraken-node run` en la ruta principal del proyecto.
+
+## Distribución de las pruebas y técnicas utilizadas
+
+| **Escenario** | **Estrategia** |
+| ----- | ----- | 
+| 001_create_member_negative_invalid_mail.feature|  |  
+| 002_create_member_negative_name_to_long.feature|  |  
+| 003_create_member_positive.feature|  |  
+| 004_create_member_negative_mail_duplicado.feature|  |  
+| 005_update_member_negative_invalid_mail.feature|  |  
+| 006_update_member_negative_name_to_long.feature|  |  
+| 007_update_member_positive.feature|  |  
+| 008_update_member_positive_name.feature|  |  
+| 009_update_member_positive_add_note.feature|  |  
+| 010_update_member_positive_unsubscribe.feature|  |  
+| 011_tag_create_negative_no_name.feature|  |  
+| 012_tag_create_negative_descr_to_long.feature|  |  
+| 013_tag_create_negative_invalid_color.feature|  |  
+| 014_tag_create_positive.feature|  |  
+| 015_tag_create_negative_duplicate_name.feature|  |  
+| 016_tag_update_negative_invalid_color.feature|  |  
+| 017_tag_update_negative_invalid_desc_to_long.feature|  |  
+| 018_tag_update_negative_invalid_facebook_desc_to_long.feature|  |  
+| 019_tag_update_negative_invalid_twitter_desc_to_long.feature|  |  
+| 020_tag_update_negative_invalid_meta_desc_to_long.feature|  |  
+| 021_tag_update_positive_color.feature|  |  
+| 022_tag_update_positive_desc.feature|  |  
+| 023_tag_update_positive_facebook_desc.feature|  |  
+| 024_tag_update_positive_twitter_desc.feature|  |  
+| 025_tag_update_positive_meta_desc.feature|  |  
+| 031_edit_profile_positive.feature| Aleatorio (kraken-faker) |  
+| 032_edit_profile_positive_too_short.feature| A-priori |  
+| 033_edit_profile_positive_too_long.feature| A-priori |  
+| 034_edit_profile_negative_empty.feature| A-priori |  
+| 035_edit_profile_negative_too_long.feature| A-priori |  
+| 036_edit_profile_fullname_negative_empty_value.feature| A-priori |  
+| 037_edit_profile_fullname_negative_too_long.feature| A-priori |  
+| 038_edit_profile_slug_positive_too_long.feature| A-priori |  
+| 039_edit_profile_email_negative_too_long.feature| A-priori |  
+| 040_edit_profile_location_negative_too_long.feature| A-priori |  
+| 041_edit_profile_website_positive_too_long.feature| A-priori |  
+| 042_edit_profile_website_negative_too_long.feature| A-priori |  
+| 043_edit_profile_website_negative_invalid_data.feature| A-priori |  
+| 044_edit_profile_bio_negative_too_long.feature| A-priori |  
+| 045_change_general_settings_positive.feature| Aleatorio (kraken-faker) |  
+| 046_change_general_settings_positive_empty.feature| Aleatorio (Faker) |  
+| 047_change_general_settings_positive_too_short.feature| Aleatorio (Faker) |  
+| 048_change_general_settings_positive_too_long.feature| Aleatorio (Faker) |  
+| 049_change_general_settings_title_negative_too_long.feature| Aleatorio (Faker) |  
+| 050_change_general_settings_description_negative_too_long.feature| Aleatorio (Faker) |  
+| 051_change_general_settings_language_negative_too_long.feature|Aleatorio (Faker)  |  
+| 052_create_page_positive.feature| Aleatorio (kraken-faker) |  
+| 053_create_page_positive_empty.feature| Aleatorio (Faker) |  
+| 054_create_page_positive_too_short.feature| Aleatorio (Faker) |  
+| 055_create_page_positive_too_long.feature| Aleatorio (Faker) |  
+| 056_create_page_negative_title_too_long.feature| Pseudo aleatorio dinámico (Faker) |  
+| 057_create_page_positive_with_excerpt.feature| Pseudo aleatorio dinámico (Faker) |  
+| 058_create_page_negative_excerpt_too_long.feature| Pseudo aleatorio dinámico (Faker) |  
+| 059_create_draft_page_positive.feature| Pseudo aleatorio dinámico (Faker) |  
+| 060_login_feature_negative.feature| Pseudo aleatorio dinámico (Faker) |  
+
+
 
 
