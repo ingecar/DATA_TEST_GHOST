@@ -95,31 +95,31 @@ Para correr la prueba, ejecute el comando `./node_modules/kraken-node/bin/kraken
 
 | **Escenario** | **Estrategia** |
 | ----- | ----- | 
-| 001_create_member_negative_invalid_mail.feature|  |  
-| 002_create_member_negative_name_to_long.feature|  |  
-| 003_create_member_positive.feature|  |  
-| 004_create_member_negative_mail_duplicado.feature|  |  
-| 005_update_member_negative_invalid_mail.feature|  |  
-| 006_update_member_negative_name_to_long.feature|  |  
-| 007_update_member_positive.feature|  |  
-| 008_update_member_positive_name.feature|  |  
-| 009_update_member_positive_add_note.feature|  |  
-| 010_update_member_positive_unsubscribe.feature|  |  
-| 011_tag_create_negative_no_name.feature|  |  
-| 012_tag_create_negative_descr_to_long.feature|  |  
-| 013_tag_create_negative_invalid_color.feature|  |  
-| 014_tag_create_positive.feature|  |  
-| 015_tag_create_negative_duplicate_name.feature|  |  
-| 016_tag_update_negative_invalid_color.feature|  |  
-| 017_tag_update_negative_invalid_desc_to_long.feature|  |  
-| 018_tag_update_negative_invalid_facebook_desc_to_long.feature|  |  
-| 019_tag_update_negative_invalid_twitter_desc_to_long.feature|  |  
-| 020_tag_update_negative_invalid_meta_desc_to_long.feature|  |  
-| 021_tag_update_positive_color.feature|  |  
-| 022_tag_update_positive_desc.feature|  |  
-| 023_tag_update_positive_facebook_desc.feature|  |  
-| 024_tag_update_positive_twitter_desc.feature|  |  
-| 025_tag_update_positive_meta_desc.feature|  |  
+| 001_create_member_negative_invalid_mail.feature| A-priori |  
+| 002_create_member_negative_name_to_long.feature| A-priori |  
+| 003_create_member_positive.feature| A-priori |  
+| 004_create_member_negative_mail_duplicado.feature| A-priori |  
+| 005_update_member_negative_invalid_mail.feature| A-priori |  
+| 006_update_member_negative_name_to_long.feature| A-priori |  
+| 007_update_member_positive.feature| A-priori |  
+| 008_update_member_positive_name.feature| A-priori |  
+| 009_update_member_positive_add_note.feature| A-priori |  
+| 010_update_member_positive_unsubscribe.feature| A-priori |  
+| 011_tag_create_negative_no_name.feature| A-priori |  
+| 012_tag_create_negative_descr_to_long.feature| A-priori |  
+| 013_tag_create_negative_invalid_color.feature| A-priori |  
+| 014_tag_create_positive.feature| A-priori |  
+| 015_tag_create_negative_duplicate_name.feature| A-priori |  
+| 016_tag_update_negative_invalid_color.feature| Aleatorio (Faker) |  
+| 017_tag_update_negative_invalid_desc_to_long.feature| Aleatorio (Faker) |  
+| 018_tag_update_negative_invalid_facebook_desc_to_long.feature| Aleatorio (Faker) |  
+| 019_tag_update_negative_invalid_twitter_desc_to_long.feature| Aleatorio (Faker) |  
+| 020_tag_update_negative_invalid_meta_desc_to_long.feature| Aleatorio (Faker) |  
+| 021_tag_update_positive_color.feature| Aleatorio (Faker) |  
+| 022_tag_update_positive_desc.feature| Aleatorio (Faker) |  
+| 023_tag_update_positive_facebook_desc.feature| Aleatorio (Faker) |  
+| 024_tag_update_positive_twitter_desc.feature| Aleatorio (Faker) |  
+| 025_tag_update_positive_meta_desc.feature| Aleatorio (Faker) |  
 | 031_edit_profile_positive.feature| Aleatorio (kraken-faker) |  
 | 032_edit_profile_positive_too_short.feature| A-priori |  
 | 033_edit_profile_positive_too_long.feature| A-priori |  
